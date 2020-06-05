@@ -1,6 +1,7 @@
 import hashlib
 import requests
 import sys
+from getpass import getpass
 
 
 def request_pwdnedpasswords(hashed_passwd):
@@ -53,6 +54,6 @@ def parse_args():
 
 
 if __name__ == '__main__':
-    passwd = parse_args()
+    passwd = getpass()
     hashed_passwd = hashlib.sha1(passwd .encode('utf-8')).hexdigest()
     request_pwdnedpasswords(hashed_passwd)
