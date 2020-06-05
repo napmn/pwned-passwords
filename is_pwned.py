@@ -45,14 +45,6 @@ def parse_response(response_text, hashed_passwd):
         print('Password has not been pwned so far.')
 
 
-def parse_args():
-    if len(sys.argv) < 2:
-        print('The script requires one argument -> plain text password')
-        sys.exit(1)
-    else:
-        return sys.argv[1]
-
-
 if __name__ == '__main__':
     passwd = getpass()
     hashed_passwd = hashlib.sha1(passwd .encode('utf-8')).hexdigest()
