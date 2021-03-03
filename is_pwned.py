@@ -1,6 +1,5 @@
 import hashlib
 import requests
-import sys
 from getpass import getpass
 
 
@@ -47,5 +46,5 @@ def parse_response(response_text, hashed_passwd):
 
 if __name__ == '__main__':
     passwd = getpass()
-    hashed_passwd = hashlib.sha1(passwd .encode('utf-8')).hexdigest()
+    hashed_passwd = hashlib.sha1(passwd.encode('utf-8')).hexdigest()
     request_pwdnedpasswords(hashed_passwd)
